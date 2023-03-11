@@ -1,0 +1,5 @@
+DEBUG    urllib3.connectionpool:connectionpool.py:228 Starting new HTTP connection (1): localhost:8180
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://localhost:8180 "POST /demo/post HTTP/1.1" 200 None
+INFO     root:SendUtil.py:168 期望值:200 实际值：200
+INFO     root:SendUtil.py:168 期望值:man 实际值：man
+INFO     root:test_requests.py:25 {'msg': '操作成功', 'code': 200, 'data': {'address': 'anhui', 'ip': '127.0.0.1', 'sex': 'man', 'age': 28, 'token': 'abc34gfg7'}}

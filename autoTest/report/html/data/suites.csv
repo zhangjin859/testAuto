@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Mar 10 22:06:42 CST 2023","Fri Mar 10 22:06:42 CST 2023","224","autoTest","test_requests","Test01","","","test_get_token1[caseinfo0]",""
+"passed","Fri Mar 10 22:06:42 CST 2023","Fri Mar 10 22:06:42 CST 2023","9","autoTest","test_requests","Test01","","","test_get_token1[caseinfo1]",""
+"passed","Fri Mar 10 22:06:42 CST 2023","Fri Mar 10 22:06:42 CST 2023","23","autoTest","test_requests","Test01","","","test_get_token1[caseinfo2]",""

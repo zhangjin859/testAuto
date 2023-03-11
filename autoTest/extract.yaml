@@ -1,0 +1,50 @@
+-
+  name: 获取token鉴权码
+  request:
+    method: post
+    headers:
+      Content-Type: application/json
+    url: http://localhost:8180/demo/post
+    json:
+      username: client
+      age: 28
+      address: anhui
+      sex: man
+      ip: 127.0.0.1
+  validate:
+    - eq: [ $.code, 200 ]
+    - eq: [ $.data.sex, man ]
+  extract:
+    token: $..token
+# yaml文件里的空值也可以用null或~ 或不写 不能写为None  None会被解析为字符串
+-
+  name: 岗位管理新增接口
+  description: 系统管理模块
+  request:
+    method: POST
+    url: http://localhost:8180/demo/token
+    params:
+       token: ${get_extract_data(token)}
+       postName: ${get_random_number(1,1000)}
+#      postSort: 0
+#      status: 0
+#    headers:
+#         Content-Type: ${get_extract_header(header)}
+  validate: ~
+
+#
+# extract:
+#     token: '"data":"(.*?)"'
+#     t: $arg.token  通过jsonpath提取值
+#     t: token  通过json【token】提取值
+-
+  name: 文件上传
+  request:
+      url: http://127.0.0.1:8180/demo/upload
+      method: POST
+#      headers:
+#        Content-Type: application/json
+      files:
+#          title: 文件上传
+          file: D:\tool\python\pycharm\pythonProject\22.jpg
+  validate: ~
